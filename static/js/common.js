@@ -13,10 +13,27 @@ $(document).ready(function() {
 				$("#gnb li").eq(0).find("a").removeClass("on");		
 				$("#indicator li").eq(0).find("a").removeClass("on");		
 			}
+
+			if($(".sec2 .sec_inner").hasClass("focusMove")){
+				$(".sec2 .sec_inner").removeClass("focusMove");
+			}
 		}
 	});
+	
 
 	// 	$(".btn_contact").on("click", function(){
 	//         $.fn.fullpage.moveTo(6);
 	// 	});
+	$(".sec2 .banner_area li a").on("click", function(){
+		$(".sec2 .sec_inner").addClass("focusMove");
+	});
+
+	$('.sec2_slider').slick({
+		fade: true,
+		arrows: true,
+		infinite: false,	
+	});
+	$('.sec2_slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+		player1.cueVideoById(youtubeId1[currentSlide]);
+	});	
 });

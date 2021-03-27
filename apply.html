@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="static/img/favicon.ico">	
+	<title>VUERON - LiDAR perception software company | 뷰런테크놀로지</title>
+    <meta name="description" content="VUERON provides the lidar perception software for ADAS, autonomous vehicle, industrial safety and security system.">
+    <meta name="Title" content="VUERON | 뷰런테크놀로지" />
+    <meta name="keywords" content="VUERON, LiDAR, Perception, 3D Point Cloud, ADAS, Autonomous Driving System, Autonomous vehicle, Automotive, Unmmaned vehicle, Detection, Classification, Tracking, Prediction, Deep learning, Machine learning, Pedestrian detection, security, 뷰런테크놀러지, 뷰런, 라이다, 자율주행, 객체 인식, 보안, 검출, 분류, 추적, 예측, 딥러닝, 머신러닝" />
+
+    <link rel="stylesheet" type="text/css" href="static/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/fonts/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/common.css" />   
+
+    <script type="text/javascript" src="static/js/jquery-1.11.3.min.js"></script>  
+    <script>
+        $(function(){
+            $(".file_box input").on("change", function(){
+                $(".file_box label").text($(this).val());
+            });
+
+            $(".btn_apply").on("click", function(){
+                alert('전송이 완료되었습니다.');
+                $("#container").hide();
+                $(".result_page").show();
+            });
+        });
+        
+    </script>
+</head>
+
+<body>
+    <div id="wrap"> 
+        <header>
+            <a href="index.html" class="btn_back">BACK</a>
+        </header>
+        
+        <div id="container" class="apply">
+            <a href="contact.html" class="btn_contact"><img src="static/img/icon_email.svg" alt="">CONTACT US</a>
+
+            <div class="contents">
+                <h1>Apply for this job.</h1>
+                <div class="tab_menu">
+                    <a href="javascript:;" data-tab="tab1" class="on">PERCEPTION ENGINEER</a>
+                    <a href="javascript:;" data-tab="tab2">DEEP LEARING  ENGINEER</a>
+                </div>
+
+                <div class="tab_cont" id="tab1">
+                    <div class="form_area">     
+                        <div class="select_box">                
+                            <select>
+                                <option selected>Location</option>
+                                <option>Location1</option>
+                                <option>Location2</option>
+                            </select>
+                        </div>   
+                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <div class="form_area">
+                        <div class="select_box">
+                            <select>
+                                <option selected>Department</option>
+                                <option>Department1</option>
+                                <option>Department2</option>
+                            </select>
+                        </div>
+                        <input type="text" placeholder="Email Address">
+                        <input type="tel" placeholder="H.P">
+                    </div>
+                    <div class="btn_area">
+                        <div class="file_box">
+                            <input type="file" id="resume"><label for="resume">Resume</label>
+                        </div>
+                        <button class="btn_apply">Apply</button>
+                    </div>
+                </div>
+
+                <dl class="info_txt">
+                    <dt>Main Role</dt>
+                    <dd>
+                        <ul>
+                            <li>- Develop LiDAR perception algorithm (C/Python)</li>
+                            <li>- Research, design, and develop deep learning/machine learning solutions and algorithms</li>
+                            <li>- Implement cutting edge deep learning/machine learning techniques in object classification, tracking, and prediction</li>
+                            <li>- Use real-time estimation from surroundings to predict the motion of surrounding vehicles</li>
+                        </ul>
+                    </dd>
+
+                    <dt>Qualification</dt>
+                    <dd>
+                        <ul>
+                            <li>- MS or higher degree in CS/CE/EE(Candidate) or equivalent industry experience</li>
+                            <li>- Experience in the field of deep learning/ machine learning</li>
+                            <li>- Strong programming skills in C/C++ or Python</li>
+                        </ul>
+                    </dd>
+
+                    <dt>Bonus Point</dt>
+                    <dd>
+                        <ul>
+                            <li>- Ph.D. in CS/CE/EE field(Especially computer vision, digital signal processing)</li>
+                            <li>- Experience in autonomous driving competition or development</li>
+                            <li>- Experience LiDAR / Vision sensor-related project(deep learning/machine learning)</li>
+                            <li>- Experience in deploying perception algorithms</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+
+        </div>
+
+        <div class="result_page">
+            <div class="flex">
+                <div class="inner">
+                    <h2>Thank you for Applying.</h2>
+                    <a href="index.html" class="btn_home">HOME</a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="inner">
+                <div class="inner_left">
+                    <img src="static/img/logo.svg" alt="">
+                    <p class="txt1">Vueron Technology Co. Ltd.</p>
+                    <p class="txt2">HQ - 16F, Meritz Tower, 382, Gangnam-gu, Seoul, Republic of KGangnam-daeroorea <a href="" target="_blank" title="새창열림">지도보기</a></p>
+                </div>
+                <div class="inner_right">
+                    <div class="email_box">
+                        <input type="text" placeholder="Enter Your email">
+                        <button>SUBSCRIBE</button>
+                    </div>
+                    <div class="overflow">
+                        <div class="sns_area">
+                            <a href="" target="_blank" title="새창열림"><img src="static/img/icon_facebook.svg" alt="페이스북"></a>
+                            <a href="" target="_blank" title="새창열림"><img src="static/img/icon_linkedin.svg" alt="Linked In"></a>
+                            <a href="" target="_blank" title="새창열림"><img src="static/img/icon_twitter.svg" alt="트위터"></a>
+                            <a href="" target="_blank" title="새창열림"><img src="static/img/icon_youtube.svg" alt="유튜브"></a>
+                        </div>
+                        <copyright>Copyright © 2021 Vueron All rights reserved.</copyright>
+                    </div>
+                </div>  
+            </div>          
+        </footer>        
+    </div> 
+</body>
+</html>

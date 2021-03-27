@@ -1,6 +1,6 @@
 var player1, player2;
 
-var youtubeId1 = ["HRH-dvClp5A"];
+var youtubeId1 = ["EDtKd32jVbo", "EDtKd32jVbo", "EDtKd32jVbo"];
 var youtubeId2 = ["HRH-dvClp5A", "ISJdQ4e1Wzo"];
 
 var tag = document.createElement('script');
@@ -12,7 +12,7 @@ var video2_isplay = false;
 var video2_readyPlay = false;
 
 function onYouTubePlayerAPIReady() {
-	player1 = new YT.Player("player1", {
+	player1 = new YT.Player("sec2_vide_1", {
 		height: '100%',
 		width: '100%',
 		videoId: youtubeId1[0],
@@ -44,13 +44,13 @@ function onPlayerReady2(event) {
 
 function onPlayerStateChange1(event) {
     if (event.data == YT.PlayerState.PLAYING) {
-        player2.pauseVideo();
+        // player2.pauseVideo();
     }	
 }
 function onPlayerStateChange2(event) {	
 	if (event.data == YT.PlayerState.PLAYING) {
         video2_isplay = true;
-        player1.pauseVideo();
+        // player1.pauseVideo();
     } else {
         video2_isplay = false;
     }
@@ -60,32 +60,32 @@ function onPlayerStateChange2(event) {
 }
 
 $(function(){
-    //영상탭메뉴
-    $(".video2_area .video_thumb a").on("click", function(){   
-        if(!video2_readyPlay) return false;   
-        $(this).each(function(){
-            var idx = $(this).parent().index();  
-            if(!$(this).hasClass("on")){
-                player2.cueVideoById(youtubeId2[idx]);                
-                player2.playVideo(); 
-            } else {
-                if(!video2_isplay) player2.playVideo();
-            }            
-        });   
-        $(".video2_area .video_thumb a").removeClass("on");
-        $(this).addClass("on");             
-        $(".video2_area .poster").hide();
-    });
+    // //영상탭메뉴
+    // $(".video2_area .video_thumb a").on("click", function(){   
+    //     if(!video2_readyPlay) return false;   
+    //     $(this).each(function(){
+    //         var idx = $(this).parent().index();  
+    //         if(!$(this).hasClass("on")){
+    //             player2.cueVideoById(youtubeId2[idx]);                
+    //             player2.playVideo(); 
+    //         } else {
+    //             if(!video2_isplay) player2.playVideo();
+    //         }            
+    //     });   
+    //     $(".video2_area .video_thumb a").removeClass("on");
+    //     $(this).addClass("on");             
+    //     $(".video2_area .poster").hide();
+    // });
 
-    //영상커버버튼
-    $(".poster").on("click", function(){
-        if($(this).parent().hasClass('video1_area')) {
-            player1.playVideo();  
-        } else {
-            player2.playVideo(); 
-        }
-        $(this).hide();              
-    }); 
+    // //영상커버버튼
+    // $(".poster").on("click", function(){
+    //     if($(this).parent().hasClass('video1_area')) {
+    //         player1.playVideo();  
+    //     } else {
+    //         player2.playVideo(); 
+    //     }
+    //     $(this).hide();              
+    // }); 
 });
 
 
