@@ -197,6 +197,8 @@ header .btn_back:before {content:'';position:absolute;left:0;top:50%;display:blo
 #container.apply .contents .tab_menu {margin:99px 0 52px;}
 #container.apply .contents .tab_menu a {opacity:0.5; color:#f2f2f2; font-family:Roboto-Medium; font-size:14px; margin-right:36px}
 #container.apply .contents .tab_menu a.on {opacity:1;}
+#container.apply .contents .tab_cont {display:none;}
+#container.apply .contents #tab1 {display:block}
 #container.apply .contents .form_area {font-size:0; margin-top:20px;}
 #container.apply .contents .form_area .select_box {position:relative; display:inline-block}
 #container.apply .contents .form_area select {width:308px; height:44px; color:#BF090C; font-family: Roboto-Regular; font-size:16px; padding-left:16px; padding-right:30px; background:#fff}

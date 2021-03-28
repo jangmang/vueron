@@ -16,6 +16,14 @@
     <script type="text/javascript" src="static/js/jquery-1.11.3.min.js"></script>  
     <script>
         $(function(){
+            $(".tab_menu a").on("click", function(){
+                var tab = $(this).attr("data-tab");
+                $(".tab_cont").hide();
+                $("#"+tab).show();
+                $(".tab_menu a").removeClass("on");
+                $(this).addClass("on");
+
+            });
             $(".file_box input").on("change", function(){
                 $(".file_box label").text($(this).val());
             });
@@ -50,9 +58,40 @@
                     <div class="form_area">     
                         <div class="select_box">                
                             <select>
-                                <option selected>Location</option>
-                                <option>Location1</option>
-                                <option>Location2</option>
+                                <option selected>Location1-2</option>
+                                <option>Location1-3</option>
+                                <option>Location1-3</option>
+                            </select>
+                        </div>   
+                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <div class="form_area">
+                        <div class="select_box">
+                            <select>
+                                <option selected>Department</option>
+                                <option>Department1</option>
+                                <option>Department2</option>
+                            </select>
+                        </div>
+                        <input type="text" placeholder="Email Address">
+                        <input type="tel" placeholder="H.P">
+                    </div>
+                    <div class="btn_area">
+                        <div class="file_box">
+                            <input type="file" id="resume"><label for="resume">Resume</label>
+                        </div>
+                        <button class="btn_apply">Apply</button>
+                    </div>
+                </div>
+
+                <div class="tab_cont" id="tab2">
+                    <div class="form_area">     
+                        <div class="select_box">                
+                            <select>
+                                <option selected>Location2-1</option>
+                                <option>Location2-1</option>
+                                <option>Location2-2</option>
                             </select>
                         </div>   
                         <input type="text" placeholder="First Name">
